@@ -21,14 +21,27 @@ export default new Vuex.Store({
 
   },
   actions: {
-    createTodos(context){
-      const url="http://5b4dcb2aec112500143a2311.mockapi.io/api/todos";
-        axios.post(url,{context}).then(function(response){
-            context.dispatch("fetchtodos")
+    createTodos(context,values){
+      const url="http://localhost:8089/inputPage";
+        axios
+        .post(url,values)
+        .then(function(response){
+            // context.dispatch("fetchtodos")
             //     console.log(35)
                 console.log(response)
            })           
      },
+     fetchtodos(context){
+      const url="http://localhost:8089/inputPage";
+      axios.get(url).then(function(response){
+          // context.commit('initTodos',response.data);
+          // console.log(30)
+           console.log(response)
+      }
+      )
+     },
+
 
   }
+
 })

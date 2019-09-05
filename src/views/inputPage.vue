@@ -14,7 +14,7 @@
     >
       <a-input
         v-decorator="[
-          '运单号',
+          'id',
           {rules: [{  message: '201907240001' }]}
         ]"
         placeholder="201907240001"
@@ -28,7 +28,7 @@
     >
       <a-input
         v-decorator="[
-          '收件人',
+          'clientName',
           {rules: [{  message: 'Please input your note!' }]}
         ]"
         placeholder="张小五"
@@ -42,7 +42,7 @@
     >
       <a-input
         v-decorator="[
-          '电话',
+          'phone',
           {rules: [{ message: 'Please input your note!' }]}
         ]"
         placeholder="18327789749"
@@ -56,7 +56,7 @@
     >
       <a-input
         v-decorator="[
-          '重量',
+          'weight',
           {rules: [{  message: 'Please input your note!' }]}
         ]"
           placeholder="3 KG"
